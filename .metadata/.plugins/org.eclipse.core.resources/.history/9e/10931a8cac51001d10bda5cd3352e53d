@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<title>Clientes</title>
+</h:head> 
+<body> 
+	<h:form>
+		<p:dataTable value="#{clienteMB.clientes}" var="c">
+			<p:column>
+				<f:facet name="header">Código</f:facet>
+			#{c.id}
+		</p:column>
+			<p:column>
+				<f:facet name="header">Nome</f:facet>
+			#{c.nome}
+		</p:column>
+		<p:column>
+		<p:commandButton oncomplete="PF('detalhecliente').show()">
+		
+		</p:commandButton>
+		 </p:column>
+		</p:dataTable>
+	</h:form>                                                                                                                                             
+		<p:dialog modal="true" height="400" width="400" widgetVar="detalhecliente">
+		<h:form>
+		<h:panelGrid column="2">
+		<h:outputlabel value="ID: "/>
+		<h:outputText value="#{clienteMB.cliente.id}"/>
+		<h:outputlabel value=":Telefone "/>
+		<h:outputText value="#{clienteMB.cliente.telefone}"/>
+		</h:panelGrid>
+		</h:form>
+		</p:dialog>
+</body>
+</html>

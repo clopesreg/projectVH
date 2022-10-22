@@ -1,0 +1,139 @@
+package br.com.carlos.test.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TB_CLIENTE")
+public class Cliente {
+	@Id
+	@Column(name="ID_CLIENTE")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="ID_SEQ")
+	@SequenceGenerator(name="ID_SEQ",initialValue = 1, allocationSize=1)
+	private int id;
+	
+	@Column(name="NOME")
+	private String nome;
+	
+	@Column(name="EMAIL")
+	private String email;
+	
+	@Column(name="CEP")
+	private String cep;
+	
+	@Column(name="ENDERECO")
+	private String endereco;
+	
+	@Column(name="BAIRRO")
+	private String bairro;
+	
+	@Column(name="COMPLEMENTO")
+	private String complemento;
+	
+	@Column(name="CIDADE")
+	private String cidade;
+	
+	@Column(name="TELEFONE")
+	private String telefone;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public String getComplemento() {
+		return complemento;
+	}
+
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public Cliente() {
+		super();
+	}
+
+	public Cliente(int id, String nome, String email, String cep, String endereco, String bairro, String complemento,
+			String cidade) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.email = email;
+		this.cep = cep;
+		this.endereco = endereco;
+		this.bairro = bairro;
+		this.complemento = complemento;
+		this.cidade = cidade;
+	}
+
+	public Cliente(int id, String telefone) {
+		super();
+		this.id = id;
+		this.telefone = telefone;
+	}
+
+}

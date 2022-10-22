@@ -1,0 +1,10 @@
+package br.com.carlos.project.dao;
+
+import javax.ejb.Stateless;
+
+
+
+@Stateless
+public class ClienteDAO extends BaseDAO<Cliente>{
+
+}

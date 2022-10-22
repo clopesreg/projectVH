@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\clope\Desktop\devPrograms\teste1.1\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3581163120.index
+1514523197.index
+3220911583.index
+2004638747.index
+583965534.index
+3865728126.index
+2334971169.index

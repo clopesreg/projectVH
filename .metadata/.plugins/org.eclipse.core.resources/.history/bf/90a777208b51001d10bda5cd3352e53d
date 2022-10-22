@@ -1,0 +1,10 @@
+package br.com.carlos.test.repository;
+
+import javax.ejb.Stateless;
+
+
+
+@Stateless
+public class ClienteDAO extends BaseDAO<Cliente>{
+
+}

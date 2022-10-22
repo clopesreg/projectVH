@@ -1,0 +1,5 @@
+package br.com.carlos.test.dao;
+
+public class ClienteDAO {
+
+}

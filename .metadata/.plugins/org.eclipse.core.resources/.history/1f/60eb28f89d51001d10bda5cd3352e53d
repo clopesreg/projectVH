@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Cadastro de Clientes</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:panelGrid columns="2">
+			
+			<h:outputText value="Nome: " />
+			<h:inputText value="#{clienteMB.cliente.nome}" />
+			<h:outputText value="Email: " />
+			<h:inputText value="#{clienteMB.cliente.email}" />
+			<h:outputText value="Endereço: " />
+			<h:inputText value="#{clienteMB.cliente.endereco}" />
+			<h:outputText value="Complemento: " />
+			<h:inputText value="#{clienteMB.cliente.complemento}" />
+			<h:outputText value="Cidade: " />
+			<h:inputText value="#{clienteMB.cliente.cidade}" />
+			<h:outputText value="CEP: " />
+			<h:inputText value="#{clienteMB.cliente.cep}" />
+			<h:outputText value="Bairro: " />
+			<h:inputText value="#{clienteMB.cliente.bairro}" />
+
+		</h:panelGrid>
+		<h:commandButton action="#{clienteMB.salvar()}" value="Salvar Cliente" />
+	</h:form>
+</h:body>
+</html>

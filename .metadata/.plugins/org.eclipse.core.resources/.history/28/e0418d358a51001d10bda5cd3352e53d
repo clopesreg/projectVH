@@ -1,0 +1,5 @@
+package br.com.carlos.test.repository;
+
+public interface JpaRepository<T1, T2> {
+
+}
